@@ -28,6 +28,3 @@ This project is developed using FastAPI to create lightweight and fast backend s
 - Uvicorn (ASGI Server)  
 - Pydantic (Data validation)  
 
----
-
-## 📁 Project Structure
