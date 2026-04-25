@@ -1,0 +1,120 @@
+🚀 FastAPI Setup & Run Guide
+
+📁 1. Navigate to Project Folder
+
+bash
+cd F:\fast_api
+
+
+---
+
+🧪 2. Create Virtual Environment
+
+bash
+python -m venv .venv
+
+
+
+
+▶️ 3. Activate Virtual Environment
+
+bash
+.venv\Scripts\activate
+
+
+
+
+📦 4. Install Required Packages
+
+bash
+python -m pip install fastapi uvicorn
+
+
+
+
+📄 5. Create Python File (`main.py`)
+
+python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "API Working"}
+
+
+
+
+▶️ 6. Run FastAPI Server
+
+🔹 If file is inside folder (`python_fast_api/main.py`)
+
+bash
+.venv\Scripts\python -m uvicorn python_fast_api.main:app --reload
+
+
+🔹 If file is in root folder (`main.py`)
+
+bash
+.venv\Scripts\python -m uvicorn main:app --reload
+
+
+
+
+🔌 7. Run on Custom Port
+
+bash
+.venv\Scripts\python -m uvicorn python_fast_api.main:app --reload --port 8001
+
+
+
+
+🌐 8. Access Application
+
+* Home: http://127.0.0.1:8000
+* Custom Port: http://127.0.0.1:8001
+
+---
+
+📘 9. API Documentation (Swagger UI)
+
+text
+http://127.0.0.1:8000/docs
+
+
+
+⛔ 10. Stop Server
+text
+CTRL + C
+
+
+---
+
+🔥 Optional: Using `uv` (Modern Approach)
+
+Install uv
+
+bash
+python -m pip install uv
+
+
+Add Dependencies
+
+bash
+python -m uv add fastapi uvicorn
+
+
+## Run Server
+
+bash
+uv run uvicorn python_fast_api.main:app --reload
+
+
+---
+
+🎯 Final Important Command
+
+bash
+.venv\Scripts\python -m uvicorn python_fast_api.main:app --reload
+

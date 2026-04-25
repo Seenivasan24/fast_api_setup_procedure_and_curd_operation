@@ -1,8 +1,0 @@
-py -m uv init
-py -m uv venv
-.venv\Scripts\activate
-python -m pip install uv
-python -m uv add "fastapi[standard]"
-(.venv) F:\GTECH_python_fullstack>python -m uv add uvicorn
-Resolved 46 packages in 104ms
-Checked 44 packages in 168ms
